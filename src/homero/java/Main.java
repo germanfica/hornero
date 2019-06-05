@@ -100,45 +100,78 @@ public class Main {
 		int i = 0;
 		int solucion = 0;
 		boolean salir = false;
-		
+
 		System.out.println("Longitud del arreglo" + losparametros.length);
-		
+
 		// Usar while
 		while (!salir && i < losparametros.length) {
 			char ch = losparametros[i].trim().charAt(0);
-			if(esVocal(ch)){
+			if (esVocal(ch)) {
 				solucion = 1;
 				salir = true;
 			}
 			i++;
 		}
-		
+
 		respuesta = String.valueOf(solucion);
 
 		return respuesta;
 	}
+
 	/*
-	 * Se tiene un arreglo de N palabras y se necesita crear y mostrar una nueva palabra
-	 * concatenando las iniciales de cada una de las palabras contenidas. Por ejemplo si
-	 * el arreglo contiene: [“casa”,”automovil”, “día”] el resultado será la palabra “cad” .
-	 * Observación: se recibe un arreglo donde la posición 0 corresponde al N, las posiciones
-	 * restantes corresponden a los elementos del arreglo.
-	 * */
+	 * Se tiene un arreglo de N palabras y se necesita crear y mostrar una nueva
+	 * palabra concatenando las iniciales de cada una de las palabras
+	 * contenidas. Por ejemplo si el arreglo contiene: [“casa”,”automovil”,
+	 * “día”] el resultado será la palabra “cad” . Observación: se recibe un
+	 * arreglo donde la posición 0 corresponde al N, las posiciones restantes
+	 * corresponden a los elementos del arreglo.
+	 */
 	public static String laImplementacion4(String[] losparametros) {
 		System.err.println("Los parametros obtenidos son:" + losparametros[0]
 				+ "," + losparametros[1]);
 		String respuesta = "";
-		String solucion="";
-		
+		String solucion = "";
+
 		System.out.println("Longitud del arreglo" + losparametros.length);
-		
+
 		for (int i = 1; i < losparametros.length; i++) {
 			solucion = solucion + losparametros[i].charAt(0);
 		}
-		
+
 		respuesta = String.valueOf(solucion);
 
 		return respuesta;
+	}
+
+	public static String laImplementacion5(String[] losparametros) {
+		System.err.println("Los parametros obtenidos son:" + losparametros[0]
+				+ "," + losparametros[1]);
+		String respuesta = "";
+		String solucion = "";
+
+		System.out.println("Longitud del arreglo" + losparametros.length);
+
+		for (int i = 1; i < losparametros.length; i++) {
+			solucion = solucion + losparametros[i].charAt(0);
+		}
+
+		respuesta = String.valueOf(solucion);
+
+		return respuesta;
+	}
+
+	public static int factorial(int num) {
+		int facto;
+
+		if (num > 1) {
+			facto = num * factorial(num - 1);
+
+		} else if (num == 1) {
+			facto = 1;
+		} else {
+			facto = 1;
+		}
+		return facto;
 	}
 
 	/**
